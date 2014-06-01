@@ -1,0 +1,17 @@
+STARTUP MODE READY
+./program3
+20689
+127.0.0.1
+30689
+code: 9
+index: A1
+
+servers log is:
+  SODA A1 3 75 - - - -
+code: 2
+index: A20
+code: 9
+index: A1
+
+in the servers log:
+ BUY  SODA A1 2 76 - - - -

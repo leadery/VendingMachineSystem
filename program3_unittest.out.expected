@@ -1,0 +1,59 @@
+INITIAL MACHINE FINISHED
+buy A1:
+the torecv detail:
+
+seq_num: 10
+code: 1
+index: A1
+
+in the servers log:
+seq_num 10 BUY  APPLE A1 2 2 - - - -
+the sended packet is:04 00 00 00 0a 00 00 00 01 05 01 41 50 50 4c 45 
+ 
+what you should see: 04 00 00 00 0a 00 00 00 01 05 01 41 50 50 4c 45
+code: 04 
+seq: 00 00 00 0a 
+price:00 00 00 01 
+name length: 05 
+status code: 						01 
+name: 41 50 50 4c 45
+
+buy A1 again:
+the torecv detail:
+
+seq_num: 20
+code: 1
+index: A1
+
+in the servers log:
+seq_num 20 BUY  APPLE A1 1 27 - - - -
+the sended packet is:04 00 00 00 14 00 00 00 02 05 01 41 50 50 4c 45 
+ 
+what you should see: 04 00 00 00 14 00 00 00 02 05 01 41 50 50 4c 45
+code: 04 
+seq: 00 00 00 0a 
+price:00 00 00 02 
+name length: 05 
+status code: 						01 
+name: 41 50 50 4c 45
+
+buy A1 again:
+the torecv detail:
+
+seq_num: 30
+code: 1
+index: A1
+
+in the servers log:
+seq_num 30 BUY  APPLE A1 0 27 - - - -
+the sended packet is:04 00 00 00 1e 00 00 00 1b 05 01 41 50 50 4c 45 
+ 
+what you should see is: 04 00 00 00 1e 00 00 00 1b 05 01 41 50 50 4c 45
+code: 04 
+seq: 00 00 00 1e 
+price:00 00 00 1b 
+name length: 05 
+status code: 						01 
+name: 41 50 50 4c 45
+
+Test has passed!
